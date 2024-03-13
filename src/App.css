@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ubuntu;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.btn-sect {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: #eee;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.pass {
+  padding: 10px 50px;
+  background: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.pass::before {
+  content: "Copy";
+  position: absolute;
+  font-size: 0.9rem;
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  top: -35px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  left: calc(50% - 35px);
+  max-width: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.pass:hover::before {
+  max-width: 70px;
+}
